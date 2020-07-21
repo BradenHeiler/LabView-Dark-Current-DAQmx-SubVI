@@ -30,6 +30,7 @@ after they have locked into place.
 
 
 DIRECTORIES:
+
 Brute Force Method - This is one possible algorithm to go with. Instead
 of searching for bad tubes, it just iterates over each tube measuring
 its current. 
