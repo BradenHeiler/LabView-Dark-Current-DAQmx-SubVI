@@ -50,4 +50,5 @@ Make some corrections to the currents that are displayed after the test.
 
 Implement some sort of eclipsed time, current iteration number isn't working
 
-
+Implement some use of the leds that are attached to the PCB boards. Perhaps
+the led indicates that the tube has failed?
