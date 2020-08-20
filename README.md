@@ -4,7 +4,9 @@ LabView Code for Controlling Solenoid Actuators
 
 
 Main.vi:
-This is the main Labview program that will send 8 bits to the circuit.
+This is the main Labview program. A version of the brute force 
+algorithm has been decided on and implemented in this version. All
+the dependancies are found in the Dependancies directory. 
 It requires you to specify the port and line numbers of the 4 pins
 (data, sync, clear, write). On the datasheet this corresponds to 
 ( SER, RCLK, SRCLR, SRCLK) respectively. It has been agreed that:
@@ -12,6 +14,11 @@ data pin  - port 0, line 0
 sync pin  - port 0, line 1
 write pin - port 0, line 2
 clear pin - port 0, line 3
+
+All previous code is located in Archive. 
+
+
+Some Dependancies
 
 Generate Boolean Array SubVI.vi:
 This subVI generates the necissary bit array to pass to the send data 
@@ -29,19 +36,18 @@ Send Data is used. This stops the current flow to the solenoid valves
 after they have locked into place. 
 
 
-DIRECTORIES:
 
-Brute Force Method - This is one possible algorithm to go with. Instead
-of searching for bad tubes, it just iterates over each tube measuring
-its current. 
+TODO:
+Figure out a better way to stop the program immediatly. Currently, the 
+stop button just stops the next iteration which will take at most 10min 
+to do. 
 
-Datasheets - Contains all the datasheets for all the hardware used in this
-test.
+Utilize shift register error checking in the main code. Currently a vi
+that reads the current state of the shift register is found in the 
+"Check for Shift Reg Error" directory.
 
-Training - Tools to be used to understand the hardware and how shift
-registers work. 
+Make some corrections to the currents that are displayed after the test.
 
-Dark Current Test Copy For Experiments - dev.
+Implement some sort of eclipsed time, current iteration number isn't working
 
-Dark Current Test Copy For Experiments (sep. Sub VI Per Code Line) - dev.
 
